@@ -23,8 +23,10 @@ public class TwoCount {
         int exp = scan.nextInt();
         BigInteger result = base.pow(exp);
         String resConvert = String.valueOf(result);
-        resConvert = resConvert.replaceAll("[^2]", ""); //think of another approach
-        System.out.println(resConvert.length());
+        int count = resConvert.length() - resConvert.replace("2", "").length();
+        System.out.println(count);
+        // resConvert = resConvert.replaceAll("[^2]", ""); (regex based approach)
+        // System.out.println(resConvert.length());
     }
     
 }
